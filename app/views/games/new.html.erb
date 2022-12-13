@@ -9,7 +9,7 @@
   <form action="/score" method="POST" data-turbo="false">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <%= hidden_field_tag :letters, @letters %>
-    <label for="">What is the longest word you can find?</label>
+    <label for="">What is the longest word in english you can find?</label>
     <div class="input">
       <input type="text" name="word">
       <input type="submit" value="Play">

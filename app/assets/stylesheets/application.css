@@ -23,6 +23,11 @@ body {
   padding-top: 30px;
 }
 
+.font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+}
+
 .container {
   width: 43%;
   text-align: center;
