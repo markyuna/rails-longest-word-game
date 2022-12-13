@@ -1,4 +1,5 @@
 require 'open-uri'
+
 # rails generate controller games
 class GamesController < ApplicationController
   def new
@@ -6,12 +7,13 @@ class GamesController < ApplicationController
   end
 
   def score
+    session[:truck] = 'truck'
+    @truck = session[:truck]
     @letters = (params[:letters] || '').split
     # params[:letters].split
     @word = (params[:word] || '').upcase
     @included = included?(@word, @letters)
     @english_word = english_word?(@word)
-    raise
   end
 
   private
@@ -21,7 +23,7 @@ class GamesController < ApplicationController
   end
 
   def english_word?(word)
-    response = open("https://wagon-dictionary.herokuapp.com/#{word}")
+    response = URI.open("https://wagon-dictionary.herokuapp.com/#{word}")
     json = JSON.parse(response.read)
     json['found']
   end
