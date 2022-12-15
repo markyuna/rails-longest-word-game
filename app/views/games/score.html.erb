@@ -1,13 +1,16 @@
 <div class="container">
+<div class="card" style="width: 28rem;">
 <h1>Result</h1>
+<div class="card-body">
+<h5><%= @message %></h5>
+</div>
 
-<p><%= @message %></p>
-
-<p>Your score is <h1><%= session[:score] %></h1></p>
+<p class="card-title">Your score is <h1><%= session[:score] %></h1></p>
 
 
 <button class = "btn btn-warning">
   <%= link_to "Play again", new_path %>
 </button>
+</div>
 
 </div>

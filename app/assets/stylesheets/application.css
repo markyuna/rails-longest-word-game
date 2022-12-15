@@ -13,14 +13,32 @@
  *= require_tree .
  *= require_self
  */
- @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400');
 
 body {
+  align-content: center;
   font-family: Roboto;
   font-weight: 300;
   padding: 0 24px;
   background-color: rgb(148, 144, 144);
   padding-top: 30px;
+}
+
+.navbar {
+  display: flex;
+  border-radius: 11px;
+}
+.fa .fab {
+-webkit-font-smoothing: antialiased;
+display: inline-block;
+font-style: normal;
+font-variant: normal;
+text-rendering: auto;
+line-height: 1;
+}
+.fab {
+  font-family: 'Font Awesome 5 Brands';
 }
 
 .font {
@@ -29,9 +47,11 @@ body {
 }
 
 .container {
+  padding-top: 50px;
   width: 43%;
   text-align: center;
   margin: 0 auto;
+  border-radius: 11px;
 }
 
 h1 {
